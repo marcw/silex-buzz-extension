@@ -1,19 +1,19 @@
 <?php
 
-namespace MarcW;
+namespace MarcW\Silex\Provider;
 
 use Silex\Application;
-use Silex\ExtensionInterface;
+use Silex\ServiceProviderInterface;
 
 use Buzz\Browser;
 use Buzz\Client;
 
 /**
- * BuzzExtension
+ * BuzzServiceProvider
  *
  * @author Marc Weistroff <marc.weistroff@gmail.com>
  */
-class BuzzExtension implements ExtensionInterface
+class BuzzServiceProvider implements ServiceProviderInterface
 {
     protected $options = array(
         'client'  => 'Buzz\Client\Curl',
