@@ -17,6 +17,8 @@
         "kriswallsmith/buzz": "0.5"
     },
     "autoload": {
-        "psr-0": "lib"
+        "psr-0": {
+            "MarcW\\Silex\\Provider": "lib"
+        }
     }
 }
