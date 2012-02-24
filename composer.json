@@ -1,0 +1,22 @@
+{
+    "name": "marcw/buzz-service-provider",
+    "type": "silex service provider",
+    "description": "Silex ServiceProvider for Buzz Http Library",
+    "keywords": ["silex", "service provider", "buzz"],
+    "homepage": "https://github.com/marcw/silex-buzz-extension",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Marc Weistroff",
+            "email": "marc@weistroff.net",
+            "homepage": "http://marc.weistroff.net"
+        }
+    ],
+    "require": {
+        "php": "> 5.3.2",
+        "kriswallsmith/buzz": "0.5"
+    },
+    "autoload": {
+        "psr-0": "lib"
+    }
+}
