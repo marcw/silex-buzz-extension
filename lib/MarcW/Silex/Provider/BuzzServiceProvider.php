@@ -51,19 +51,15 @@ class BuzzServiceProvider implements ServiceProviderInterface
             $app['autoloader']->registerNamespace('Buzz', $app['buzz.class_path']);
         }
         if (isset($app['buzz.client.timeout']) 
-            && filter_var($app['buzz.client.timeout'], FILTER_VALIDATE_INT)) 
         {
             $app['buzz']->getClient()->setTimeout($app['buzz.client.timeout']);
         }
-        if (isset($app['buzz.client.max_redirects']) 
-            && filter_var($app['buzz.client.max_redirects'], FILTER_VALIDATE_INT)) 
+        if (isset($app['buzz.client.max_redirects'])) 
         {
             $app['buzz']->getClient()->setMaxRedirects($app['buzz.client.max_redirects']);
         }
         if (isset($app['buzz.client.ignore_errors'])) {
-          if (!filter_var($app['buzz.client.ignore_errors'], FILTER_VALIDATE_BOOLEAN)) {
-            $app['buzz']->getClient()->setIgnoreErrors(false);
-          }
+            $app['buzz']->getClient()->setIgnoreErrors($app['buzz.client.ignore_errors']);
         }
     }
 }
