@@ -50,7 +50,7 @@ class BuzzServiceProvider implements ServiceProviderInterface
         if (isset($app['buzz.class_path'])) {
             $app['autoloader']->registerNamespace('Buzz', $app['buzz.class_path']);
         }
-        if (isset($app['buzz.client.timeout']) 
+        if (isset($app['buzz.client.timeout'])) 
         {
             $app['buzz']->getClient()->setTimeout($app['buzz.client.timeout']);
         }
