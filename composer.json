@@ -14,7 +14,7 @@
     ],
     "require": {
         "php": ">=5.3.2",
-        "kriswallsmith/buzz": "0.5"
+        "kriswallsmith/buzz": ">=0.6"
     },
     "autoload": {
         "psr-0": {

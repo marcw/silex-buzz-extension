@@ -60,4 +60,8 @@ class BuzzServiceProvider implements ServiceProviderInterface
             $app['buzz']->getClient()->setIgnoreErrors($app['buzz.client.ignore_errors']);
         }
     }
+
+    public function boot(Application $app)
+    {
+    }
 }
