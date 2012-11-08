@@ -1,6 +1,6 @@
 {
     "name": "marcw/buzz-service-provider",
-    "type": "silex service provider",
+    "type": "library",
     "description": "Silex ServiceProvider for Buzz Http Library",
     "keywords": ["silex", "service provider", "buzz"],
     "homepage": "https://github.com/marcw/silex-buzz-extension",
