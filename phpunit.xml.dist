@@ -1,22 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<!-- http://www.phpunit.de/manual/current/en/appendixes.configuration.html -->
-<phpunit
-    backupGlobals               = "false"
-    backupStaticAttributes      = "false"
-    colors                      = "true"
-    convertErrorsToExceptions   = "true"
-    convertNoticesToExceptions  = "true"
-    convertWarningsToExceptions = "true"
-    processIsolation            = "false"
-    stopOnFailure               = "false"
-    syntaxCheck                 = "false"
-    bootstrap                   = "tests/bootstrap.php">
-
+<phpunit colors="true">
     <testsuites>
-        <testsuite name="Test Suite">
-            <directory>./tests/</directory>
+        <testsuite name="Buzz Service Provider Test Suite">
+            <directory>./tests/MarcW/Silex/Provider</directory>
         </testsuite>
     </testsuites>
 
+    <filter>
+        <whitelist>
+            <directory>./lib/MarcW/Silex/Provider/</directory>
+        </whitelist>
+    </filter>
 </phpunit>
