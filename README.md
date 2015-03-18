@@ -1,6 +1,8 @@
 BuzzServiceProvider
 ===================
 
+[![Build Status](https://travis-ci.org/royopa/buzz-service-provider.svg?branch=master)](https://travis-ci.org/royopa/buzz-service-provider)
+
 Buzz is a lightweight PHP 5.3 library for issuing HTTP requests.
 
 Provides Buzz library to use with Silex microframework.
