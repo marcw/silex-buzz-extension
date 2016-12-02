@@ -2,17 +2,12 @@
 
 namespace MarcW\Silex\Provider;
 
-use Silex\Application;
-use Silex\ServiceProviderInterface;
+use Pimple\Container;
+use Pimple\ServiceProviderInterface;
 
 use Buzz\Browser;
 use Buzz\Client;
 
-/**
- * BuzzServiceProvider
- *
- * @author Marc Weistroff <marc.weistroff@gmail.com>
- */
 class BuzzServiceProvider implements ServiceProviderInterface
 {
     protected $options = array(
@@ -20,11 +15,11 @@ class BuzzServiceProvider implements ServiceProviderInterface
         'browser' => 'Buzz\Browser',
     );
 
-    public function register(Application $app)
+    public function register(Container $app)
     {
         $options = isset($app['buzz.options']) ? array_merge($this->options, $app['buzz.options']) : $this->options;
 
-        $app['buzz'] = $app->share(function() use($options) {
+        $app['buzz'] = function() use($options) {
             $client = null;
             if ($options['client'] instanceof Closure) {
                 $callable = $options['client'];
@@ -44,7 +39,7 @@ class BuzzServiceProvider implements ServiceProviderInterface
             }
 
             return $browser;
-        });
+        };
 
 
         if (isset($app['buzz.class_path'])) {
